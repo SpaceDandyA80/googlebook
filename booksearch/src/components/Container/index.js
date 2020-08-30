@@ -1,7 +1,7 @@
 import React from "react";
 
-function Wrapper(props) {
+function Container(props) {
   return <main className="wrapper" {...props} />;
 }
 
-export default Wrapper;
+export default Container;

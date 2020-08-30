@@ -1,21 +1,21 @@
 import React from "react";
 
-function Form(props) {
+function Result(props) {
   return (
     <div className="container">
       <form>
         <div className="form-group">
-          <label htmlFor="search">
+          <label htmlFor="searchBar">
             <h2>Search for Google Books</h2>
           </label>
           <input
             onChange={props.handleInputChange}
-            value={props.search}
-            name="search"
+            value={props.searchBar}
+            name="searchBar"
             type="text"
             className="form-control"
             placeholder="Search for Books"
-            id="search"
+            id="searchBar"
           />
           <button
             onClick={props.handleFormSubmit}
@@ -29,4 +29,4 @@ function Form(props) {
   );
 }
 
-export default Form;
+export default Result;

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from "./components/Nav";
 import Header from "./components/Header";
-import Wrapper from "./components/Wrapper";
+import Container from "./components/Container";
 
 import Search from "./pages/Search";
 
@@ -15,9 +15,9 @@ class App extends Component {
         <div>
           <NavBar />
           <Header />
-          <Wrapper>
+          <Container>
             <Route exact path="/search" component={Search} />
-          </Wrapper>
+          </Container>
         </div>
       </Router>
     );

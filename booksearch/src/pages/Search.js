@@ -1,11 +1,11 @@
 import React from "react";
-import Form from "../components/Form";
+import Results from "../components/Form";
 import API from "../utils/API";
 
 class Search extends React.Component {
   state = {
     value: "",
-    books: [],
+    bookArr: [],
   };
 
   componentDidMount() {
@@ -16,7 +16,7 @@ class Search extends React.Component {
     API.getBook(query)
       .then((res) =>
         this.setState({
-          books: res.data.items.map((bookData) => this.makeBook(bookData)),
+          bookArr: res.data.items.map((bookData) => this.makeBook(bookData)),
         })
       )
       .catch((err) => console.error(err));
@@ -38,7 +38,7 @@ class Search extends React.Component {
   render() {
     return (
       <div>
-        <Form
+        <Results
           search={this.state.search}
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
